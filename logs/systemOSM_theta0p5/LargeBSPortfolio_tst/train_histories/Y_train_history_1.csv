@@ -1,0 +1,3 @@
+step, learning_rate, loss_function, sampling_time, target_gathering_time, valid_loss_time, gradient_step_time, iteration_time, step_time, cumulative_elapsed_time
+0,1.000000e-03,5.5001054688e+03,7.06196e-04,2.12222e-01,2.78608e-01,3.06581e+00,3.55764e+00,3.55765e+00,2.46677e+01
+1024,1.000000e-06,3.1992822266e+03,6.11067e-04,2.55799e-03,2.06590e-03,4.80342e-03,1.03424e-02,1.14656e+01,3.25756e+01

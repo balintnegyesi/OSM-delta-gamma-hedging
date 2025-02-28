@@ -1,0 +1,83 @@
+{
+  "bcos_config": {
+    "P": 10,
+    "K": 160,
+    "Q": 10000,
+    "L": 10,
+    "valid_size": 128,
+    "is_dct_recovery": false,
+    "is_total_derivative_split": false,
+    "is_plot_steps": false
+  },
+  "eqn_config": {
+    "_comment": "Bermudan Option with Heston dynamics",
+    "eqn_name": "BermudanGeometricHeston",
+    "T": 0.3,
+    "J": 1,
+    "d": 2,
+    "m": 1,
+    "N": 60,
+    "R": [
+      1
+    ],
+    "parameter_config": {
+      "__comment": "all equation specific parameters are expected to be initialized here",
+      "sigma": 0,
+      "r": 0.1,
+      "mu": 0.1,
+      "q": 0,
+      "X_0": 10,
+      "K": 11,
+      "kappa": 5,
+      "nu_bar": 0.16,
+      "xi": 0.9,
+      "nu_0": 0.0625,
+      "rho": 0.1,
+      "rho_crossassets": 0,
+      "rho_crossassetnu": 0,
+      "non_negativity_approach": "higham-mao",
+      "epsilon": 1e-16,
+      "call_or_put": "put",
+      "is_smoothed": false
+    },
+    "discretization_config": {
+      "theta_y": 0.5,
+      "theta_z": 1
+    }
+  },
+  "net_config": {
+    "is_t0_explicit_init": true,
+    "is_nn_at_t0": true,
+    "num_hiddens": [
+      50,
+      50,
+      50,
+      50
+    ],
+    "activation_func": "tanh",
+    "is_batch_norm": true,
+    "is_layer_norm": false,
+    "bn_epsilon": 0.001,
+    "is_bias": true,
+    "is_chen_schedule": true,
+    "initial_learning_rate": 0.001,
+    "decay_rate": 0.001,
+    "lower_bound_learning_rate": 1e-06,
+    "pretrained_initial_learning_rate": 0.0001,
+    "num_iterations": 65536,
+    "pretrained_num_iterations": 4096,
+    "batch_size": 1024,
+    "valid_size": 1024,
+    "train_size": null,
+    "is_fetch": true,
+    "logging_frequency": 1024,
+    "dtype": "float32",
+    "is_plot": false,
+    "is_report_t0_errors": true,
+    "verbose": true,
+    "layer_width": 100,
+    "seed": null,
+    "is_terminal_regression_preinit": false,
+    "batch_size_pretrained": null
+  }
+}
